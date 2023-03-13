@@ -7,11 +7,11 @@ import streamlit as st
 # Set the OpenAI secret key
 openai.api_key = st.secrets['pass']
 
-st.header('AI Analysis Report Generator')
+st.header('AI Summary Generator')
 st.subheader('current version : beta 0.1')
 
 # Set the if, else loop including prompt
-article_text = st.text_area('Please enter the text material or URL you would like to generate a report from')
+article_text = st.text_area('Please enter the text material or URL you would like to generate a summary from')
 if len(article_text) > 5:
     temp = st.slider("temperature", 0.2, 0.5, 0.8)
     if st.button ('Generate Report'):
