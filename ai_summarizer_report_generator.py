@@ -18,7 +18,7 @@ if len(article_text) > 5:
         response = openai.Completion.create(
             engine = "text-davinci-003",
             prompt = "Create a summary analysis. The summary should be written in a formal tone, capture major points and all key details and should not repeat any information between or within sections. It should provide accurate information, with short concise descriptions for all data points and their implications. The target use for the summary will be to compile with other summary data for a report. Use only the text information located here: " + article_text,
-            max_tokens = 3000,
+            max_tokens = 2000,
             presence_penalty=0.8,
             frequency_penalty=0.6,
             temperature = temp
